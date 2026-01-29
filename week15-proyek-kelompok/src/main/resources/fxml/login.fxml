@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="550.0" prefWidth="900.0" spacing="30.0" style="-fx-background-color: #f0fdf4;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.upb.agripos.controller.LoginController">
+
+    <VBox alignment="CENTER" maxWidth="460.0" spacing="25.0" style="-fx-background-color: rgba(255, 255, 255, 0.98); -fx-background-radius: 24; -fx-padding: 55 45 55 45; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 30, 0.3, 0, 8);">
+
+        <Label text="🌿" textFill="#10b981">
+            <font>
+                <Font name="System Bold" size="72.0" />
+            </font>
+        </Label>
+
+        <Label text="AGRI-POS" textFill="#10b981">
+            <font>
+                <Font name="System Bold" size="32.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="-15.0" />
+            </VBox.margin>
+        </Label>
+
+        <Label text="Sistem Manajemen Pertanian Terintegrasi" textFill="#059669">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="-8.0" bottom="8.0" />
+            </VBox.margin>
+        </Label>
+
+        <Label text="Silakan masuk untuk melanjutkan" textFill="#64748b">
+            <font>
+                <Font size="13.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="12.0" />
+            </VBox.margin>
+        </Label>
+
+        <VBox alignment="CENTER_LEFT" spacing="10.0" maxWidth="1.7976931348623157E308">
+            <Label text="USERNAME" textFill="#0f172a">
+                <font><Font name="System Bold" size="11.5" /></font>
+            </Label>
+            <TextField fx:id="txtUsername" promptText="Masukkan Username" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 12; -fx-border-width: 2; -fx-padding: 14 16 14 16; -fx-font-size: 14px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.04), 4, 0, 0, 2);" />
+        </VBox>
+
+        <VBox alignment="CENTER_LEFT" spacing="10.0" maxWidth="1.7976931348623157E308">
+            <Label text="KATA SANDI" textFill="#0f172a">
+                <font><Font name="System Bold" size="11.5" /></font>
+            </Label>
+            <HBox alignment="CENTER_LEFT" spacing="0" maxWidth="1.7976931348623157E308" style="-fx-background-color: white; -fx-border-color: #cbd5e1; -fx-border-radius: 12; -fx-border-width: 2; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.04), 4, 0, 0, 2);">
+                <StackPane HBox.hgrow="ALWAYS">
+                    <PasswordField fx:id="txtPassword" promptText="Masukkan Kata Sandi" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-radius: 0; -fx-border-width: 0; -fx-padding: 14 0 14 16; -fx-font-size: 14px; -fx-background-insets: 0;" />
+                    <TextField fx:id="txtPasswordVisible" promptText="Masukkan Kata Sandi" visible="false" managed="false" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-radius: 0; -fx-border-width: 0; -fx-padding: 14 0 14 16; -fx-font-size: 14px; -fx-background-insets: 0;" />
+                </StackPane>
+                <Button fx:id="btnTogglePassword" onAction="#togglePasswordVisibility" text="👁" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-padding: 14 16 14 16; -fx-font-size: 16px; -fx-cursor: hand;" />
+            </HBox>
+        </VBox>
+
+        <Button maxWidth="1.7976931348623157E308" onAction="#handleLogin" style="-fx-background-color: linear-gradient(to right, #10b981, #059669); -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 12; -fx-font-size: 15px; -fx-effect: dropshadow(gaussian, rgba(16, 185, 129, 0.4), 12, 0, 0, 4);" text="MASUK KE APLIKASI">
+            <padding>
+                <Insets bottom="14.0" top="14.0" />
+            </padding>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Button>
+    </VBox>
+    
+    <VBox alignment="CENTER" spacing="4" style="-fx-background-color: #047857; -fx-padding: 14 20 14 20;">
+        <Label text="© 2026 AGRI-POS • Kelompok 1 • 3IKKA" textFill="#ffffff" alignment="CENTER">
+            <font><Font name="System Bold" size="12.0" /></font>
+        </Label>
+        <Label text="Anggota: M.Rifqi An Naafi, Hari Cahyono, Inayah Fihanatin, Kavina Reyna Riyadi, Irwandi Isnugroho" textFill="#d1fae5" alignment="CENTER" style="-fx-font-size: 10px;"/>
+    </VBox>
+</VBox>
